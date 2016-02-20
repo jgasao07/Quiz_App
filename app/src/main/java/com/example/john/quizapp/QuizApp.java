@@ -10,6 +10,16 @@ import android.view.Menu;
 
 public class QuizApp extends AppCompatActivity {
 
+    public static int score = 0;
+
+    public static void addPoints(int point) {
+        score++;
+        return;
+    }
+    public int getScore() {
+        return this.score;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

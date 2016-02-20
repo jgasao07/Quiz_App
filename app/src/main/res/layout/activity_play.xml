@@ -6,13 +6,15 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    tools:context="com.example.john.quizapp.PlayActivity"
-    >
+    tools:context="com.example.john.quizapp.PlayActivity">
 
-    <fragment
-        android:name="com.example.john.quizapp.Question"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment_question" />
+        android:id="@+id/container"
+
+        >
+    </RelativeLayout>
+
 
 </RelativeLayout>
