@@ -3,4 +3,4 @@
 This app is a short, two question quiz game, consisting of three activities and two fragments. The first question is an 
 image based question. The second question is a multiple choice, text-based question. 
 
-Youtube Demo: 
+Youtube Demo: https://www.youtube.com/watch?v=5b11GGvj1OQ 
