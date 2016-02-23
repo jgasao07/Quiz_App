@@ -12,18 +12,14 @@ public class Question extends Fragment {
     Button sButton;
     EditText text;
     String input;
-//    OnFragmentAnswerSubmitted mAnswer;
+
+    // Possible answers to question 1
     String a1 = "barack obama";
     String a2 = "barack";
     String a3 = "obama";
     String a4 = "president obama";
     String a5 = "president";
 
-    /*
-    public interface OnFragmentAnswerSubmitted {
-        public void onAnswerSubmit(String input);
-    }
-    */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,8 +28,9 @@ public class Question extends Fragment {
 
         sButton = (Button)v.findViewById(R.id.submit);
         text = (EditText) v.findViewById(R.id.answer);
-        sButton.setOnClickListener(new View.OnClickListener()
-        {
+
+        // Input checking
+        sButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View view){
             input = text.getText().toString();
@@ -48,12 +45,8 @@ public class Question extends Fragment {
                 Bundle args = new Bundle();
                 getFragmentManager().beginTransaction().
                         replace(R.id.container, q2).addToBackStack(null).commit();
-
-//            mAnswer.onAnswerSubmit(input);
         }
         });
-
-        // Inflate the layout for this fragment
         return v;
     }
 

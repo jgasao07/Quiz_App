@@ -1,20 +1,14 @@
 package com.example.john.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 
-
+/**
+ * Serves as a container for the 2 fragments
+ */
 public class PlayActivity extends AppCompatActivity {
 
     CheckBox box1, box2, box3, box4;
@@ -34,6 +28,10 @@ public class PlayActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Moves to the last activity when submit is pressed
+     * @param view
+     */
     public void submit2Pressed(View view) {
         if (correct) {
             QuizApp.addPoints();
@@ -43,6 +41,10 @@ public class PlayActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Checks which box the user clicked and determines if the answer was correct
+     * @param v
+     */
     public void onCheckboxClicked(View v) {
 
         box1 = (CheckBox) v.findViewById(R.id.checkBox1);
@@ -51,11 +53,7 @@ public class PlayActivity extends AppCompatActivity {
         box4 = (CheckBox) v.findViewById(R.id.checkBox4);
 
         boolean checked = ((CheckBox) v).isChecked();
-        /*
-        if ((box2.isChecked() == true) && (box1.isChecked() == false)
-                && (box3.isChecked() == false) && (box4.isChecked() == false)) {
-            QuizApp.addPoints(1);
-        */
+
         switch(v.getId()) {
             case R.id.checkBox1:
                 if (checked) {
@@ -78,12 +76,6 @@ public class PlayActivity extends AppCompatActivity {
                 }
                 break;
         }
-
-        /*
-        if (correct == true) {
-            QuizApp.addPoints();
-        }
-        */
         return;
     }
 
