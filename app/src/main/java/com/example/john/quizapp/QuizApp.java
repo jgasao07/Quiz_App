@@ -12,12 +12,16 @@ public class QuizApp extends AppCompatActivity {
 
     public static int score = 0;
 
-    public static void addPoints(int point) {
+    public static void addPoints() {
         score++;
-        return;
     }
-    public int getScore() {
-        return this.score;
+
+    public static void reset() {
+        score = 0;
+    }
+
+    public static int getScore() {
+        return score;
     }
 
     @Override

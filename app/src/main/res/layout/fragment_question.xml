@@ -3,33 +3,46 @@
     android:id="@+id/fragment_question"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context="com.example.john.quizapp.Question">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="QUESTION 1"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="left"/>
 
         <ImageView
             android:layout_width="240dp"
             android:layout_height="240dp"
             android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/barack_obama"/>
+            android:layout_marginTop="15dp"
+            android:src="@drawable/barack_obama_min"/>
 
         <TextView
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:text="@string/question"
+            android:textAppearance="?android:textAppearanceLarge"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="200dp"
+        android:layout_gravity="bottom">
 
         <EditText
             android:id="@+id/answer"
@@ -37,17 +50,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/enter_answer"
-            android:layout_gravity="bottom"/>
+            android:layout_gravity="center"/>
 
         <Button
             android:id="@+id/submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_submit"
-            android:layout_gravity="bottom"
+            android:layout_gravity="center"
             />
-
-
 
     </LinearLayout>
 

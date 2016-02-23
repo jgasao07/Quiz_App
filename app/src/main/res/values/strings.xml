@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quiz App</string>
     <string name="welcome">Welcome to Quiz App</string>
-    <string name="start">Start</string>
+    <string name="start">Click To Start</string>
     <string name="question">Who is this person?</string>
     <string name="enter_answer">Enter answer</string>
     <string name="button_submit">Submit</string>

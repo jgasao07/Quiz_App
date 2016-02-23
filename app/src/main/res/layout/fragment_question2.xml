@@ -6,22 +6,47 @@
     tools:context="layout.Question2"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/question2"
-        android:editable="false"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView"
-        android:textSize="30dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="QUESTION 2"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question2"
+            android:editable="false"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:id="@+id/textView"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="(Check the correct answer and submit)"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="391dp"
+        android:layout_height="200dp"
         android:id="@+id/linearLayout"
+        android:paddingLeft="10dp"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -30,11 +55,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBox1"
             android:checked="false"
             android:layout_below="@+id/linearLayout"
             android:layout_alignRight="@+id/linearLayout"
-            android:layout_alignEnd="@+id/linearLayout" />
+            android:layout_alignEnd="@+id/linearLayout"
+            android:onClick="onCheckboxClicked"/>
 
         <CheckBox
         android:layout_width="wrap_content"
@@ -44,7 +70,8 @@
             android:checked="false"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/checkBox3"
-            android:layout_alignStart="@+id/checkBox3" />
+            android:layout_alignStart="@+id/checkBox3"
+            android:onClick="onCheckboxClicked"/>
 
         <CheckBox
         android:layout_width="wrap_content"
@@ -55,7 +82,8 @@
         android:checked="false"
             android:layout_below="@+id/checkBox2"
             android:layout_toRightOf="@+id/linearLayout"
-            android:layout_toEndOf="@+id/linearLayout" />
+            android:layout_toEndOf="@+id/linearLayout"
+            android:onClick="onCheckboxClicked"/>
 
         <CheckBox
         android:layout_width="wrap_content"
@@ -65,14 +93,17 @@
             android:checked="false"
         android:layout_below="@+id/checkBox"
         android:layout_alignLeft="@+id/checkBox"
-        android:layout_alignStart="@+id/checkBox" />
+        android:layout_alignStart="@+id/checkBox"
+            android:onClick="onCheckboxClicked"/>
 
         <Button
             android:id="@+id/submit2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/button_submit"
-            android:layout_gravity="center|bottom"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="left|bottom"
             android:onClick="submit2Pressed"
             />
 
